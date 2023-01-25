@@ -9,6 +9,7 @@ ISSUE_TEMPLATE.md
 
 # Environment variables
 .env
+.vscode/
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release

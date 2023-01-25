@@ -1,18 +1,3 @@
-/*
-=========================================================
-* Material Kit 2 PRO React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -53,12 +38,6 @@ function Presentation() {
     <>
       <DefaultNavbar
         routes={routes}
-        action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-pro-react",
-          label: "buy now",
-          color: "info",
-        }}
         sticky
       />
       <MKBox
@@ -85,15 +64,7 @@ function Presentation() {
                 },
               })}
             >
-              Material Kit 2 React{" "}
-              <MKBadge
-                badgeContent="pro"
-                size="lg"
-                variant="contained"
-                color="white"
-                container
-                sx={{ mt: -4 }}
-              />
+              Delve Planning Architects{" "}
             </MKTypography>
             <MKTypography variant="body1" color="white" textAlign="center" px={6} mt={1}>
               Start the Development with a ReactJS & MUI Design System inspired by Material Design.
