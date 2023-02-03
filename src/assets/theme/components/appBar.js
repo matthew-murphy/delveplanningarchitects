@@ -1,6 +1,4 @@
-
-
-export default {
+const appBar = {
   defaultProps: {
     color: "transparent",
   },
@@ -11,3 +9,5 @@ export default {
     },
   },
 };
+
+export default appBar;

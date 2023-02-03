@@ -10,7 +10,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 const { fontWeightBold, size } = typography;
 const { borderRadius } = borders;
 
-export default {
+const buttonRoot = {
   display: "inline-flex",
   justifyContent: "center",
   alignItems: "center",
@@ -36,3 +36,5 @@ export default {
     marginTop: pxToRem(-2),
   },
 };
+
+export default buttonRoot;

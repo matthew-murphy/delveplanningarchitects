@@ -10,7 +10,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 const { white, text, info, secondary } = colors;
 const { size } = typography;
 
-export default {
+const containedButton = {
   base: {
     backgroundColor: white.main,
     minHeight: pxToRem(40),
@@ -74,3 +74,5 @@ export default {
     },
   },
 };
+
+export default containedButton;

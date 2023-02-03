@@ -10,14 +10,14 @@ import Icon from "@mui/material/Icon";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-function AboutUsOption({ icon, content }) {
+function AboutUsOption({ icon, content, iconColor }) {
   return (
     <MKBox display="flex" alignItems="center" p={2}>
       <MKBox
-        width="3rem"
+        minWidth="3rem"
         height="3rem"
         variant="gradient"
-        bgColor="info"
+        bgColor={iconColor ? iconColor : "info"}
         color="white"
         coloredShadow="info"
         display="flex"

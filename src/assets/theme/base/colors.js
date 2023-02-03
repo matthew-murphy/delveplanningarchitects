@@ -6,7 +6,7 @@
  * You can customized the colors for the entire Material Kit 2 PRO React using thie file.
  */
 
-export default {
+const colors = {
   background: {
     default: "#f0f2f5",
   },
@@ -32,8 +32,8 @@ export default {
   },
 
   primary: {
-    main: "#e91e63",
-    focus: "#e91e63",
+    main: "#008C7C",
+    focus: "#008C7C",
   },
 
   secondary: {
@@ -85,8 +85,9 @@ export default {
 
   gradients: {
     primary: {
-      main: "#EC407A",
+      main: "#008C7C",
       state: "#D81B60",
+      // state: "#03191E",
     },
 
     secondary: {
@@ -246,3 +247,5 @@ export default {
     indicator: { boxShadow: "#ddd" },
   },
 };
+
+export default colors;

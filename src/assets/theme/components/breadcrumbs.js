@@ -1,5 +1,3 @@
-
-
 // Material Kit 2 PRO React base styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
@@ -7,7 +5,7 @@ import typography from "assets/theme/base/typography";
 const { grey } = colors;
 const { size } = typography;
 
-export default {
+const breadcrumbs = {
   styleOverrides: {
     li: {
       lineHeight: 0,
@@ -19,3 +17,5 @@ export default {
     },
   },
 };
+
+export default breadcrumbs;

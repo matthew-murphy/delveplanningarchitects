@@ -1,5 +1,3 @@
-
-
 // Material Kit 2 PRO React base styles
 import colors from "assets/theme/base/colors";
 import boxShadows from "assets/theme/base/boxShadows";
@@ -9,7 +7,7 @@ const { transparent } = colors;
 const { lg } = boxShadows;
 const { borderRadius } = borders;
 
-export default {
+const popover = {
   styleOverrides: {
     paper: {
       backgroundColor: transparent.main,
@@ -18,3 +16,5 @@ export default {
     },
   },
 };
+
+export default popover;

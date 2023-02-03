@@ -1,20 +1,20 @@
-
-
 import { useEffect } from "react";
 
 // react-router components
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 // @mui material components
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 // Material Kit 2 PRO React themes
-import theme from "assets/theme";
-import Presentation from "layouts/pages/presentation";
-
-// Material Kit 2 PRO React routes
+import theme from "assets/theme"
+import MKBox from "components/MKBox";
+import DefaultNavbar from "./components/DefaultNavbar/index";
+import DefaultFooter from "./components/Footers/DefaultFooter/index";
+import FooterRoutes from "footer.routes";
 import routes from "routes";
+import { Error404 } from "pages/Error/Error404";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -41,11 +41,19 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <DefaultNavbar
+        routes={routes}
+        transparent
+        absolute
+        light
+      />
       <Routes>
         {getRoutes(routes)}
-        <Route path="/presentation" element={<Presentation />} />
-        <Route path="*" element={<Navigate to="/presentation" />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
+      <MKBox pt={6} px={1} mt={6}>
+        <DefaultFooter content={FooterRoutes} />
+      </MKBox>
     </ThemeProvider>
   );
 }

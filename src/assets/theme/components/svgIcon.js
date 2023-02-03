@@ -1,9 +1,7 @@
-
-
 // Material Kit 2 PRO React helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
-export default {
+const svgIcon = {
   defaultProps: {
     fontSize: "inherit",
   },
@@ -22,3 +20,5 @@ export default {
     },
   },
 };
+
+export default svgIcon;

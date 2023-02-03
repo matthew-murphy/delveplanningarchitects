@@ -6,7 +6,7 @@
  * You can customized the breakpoints for the entire Material Kit 2 PRO React using thie file.
  */
 
-export default {
+const breakpoints = {
   values: {
     xs: 0,
     sm: 576,
@@ -16,3 +16,5 @@ export default {
     xxl: 1400,
   },
 };
+
+export default breakpoints;
