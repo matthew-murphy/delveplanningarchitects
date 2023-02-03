@@ -1,18 +1,4 @@
 {
-  "name": "material-kit-2-pro-react",
-  "version": "2.0.0",
-  "private": true,
-  "author": "Creative Tim",
-  "license": "See license in https://www.creative-tim.com/license",
-  "description": "React version of Material Kit 2 PRO by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/material-kit-pro-react/#/",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/ct-material-kit-pro-react/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/ct-material-kit-pro-react.git"
-  },
   "engines": {
     "node": "14 || 15 || 16",
     "npm": ">=6"
@@ -29,6 +15,7 @@
     "@testing-library/user-event": "12.1.10",
     "chroma-js": "2.1.2",
     "flatpickr": "4.6.9",
+    "node-sass": "^8.0.0",
     "prop-types": "15.7.2",
     "react": "17.0.2",
     "react-copy-to-clipboard": "5.0.4",

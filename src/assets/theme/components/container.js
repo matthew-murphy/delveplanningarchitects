@@ -1,5 +1,3 @@
-
-
 // Material Kit 2 PRO React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
@@ -25,7 +23,7 @@ const sharedClasses = {
   position: "relative",
 };
 
-export default {
+const container = {
   [SM]: {
     ".MuiContainer-root": {
       ...sharedClasses,
@@ -57,3 +55,5 @@ export default {
     },
   },
 };
+
+export default container;

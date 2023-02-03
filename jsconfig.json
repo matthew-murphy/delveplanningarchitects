@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es6", "dom"],
+    "allowJs": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "checkJs": false,
+    "baseUrl": "src",
+    "paths": {
+      "*": ["src/*"]
+    }
+  }
+}

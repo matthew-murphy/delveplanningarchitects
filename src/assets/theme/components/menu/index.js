@@ -1,5 +1,3 @@
-
-
 // Material Kit 2 PRO React base styles
 import boxShadows from "assets/theme/base/boxShadows";
 import typography from "assets/theme/base/typography";
@@ -14,7 +12,7 @@ const { size } = typography;
 const { text, white } = colors;
 const { borderRadius } = borders;
 
-export default {
+const menu = {
   defaultProps: {
     disableAutoFocusItem: true,
   },
@@ -32,3 +30,5 @@ export default {
     },
   },
 };
+
+export default menu;

@@ -8,7 +8,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 
 const { borderRadius } = borders;
 
-export default {
+const tableHead = {
   styleOverrides: {
     root: {
       display: "block",
@@ -17,3 +17,5 @@ export default {
     },
   },
 };
+
+export default tableHead;

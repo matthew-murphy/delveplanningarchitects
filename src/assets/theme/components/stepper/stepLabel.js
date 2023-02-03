@@ -11,7 +11,7 @@ import rgba from "assets/theme/functions/rgba";
 const { size, fontWeightRegular } = typography;
 const { white } = colors;
 
-export default {
+const stepLabel = {
   styleOverrides: {
     label: {
       marginTop: `${pxToRem(8)} !important`,
@@ -32,3 +32,5 @@ export default {
     },
   },
 };
+
+export default stepLabel;

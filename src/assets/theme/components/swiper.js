@@ -6,7 +6,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 
 const { white } = colors;
 
-export default {
+const swiper = {
   ".swiper-button-prev, .swiper-button-next": {
     position: "absolute",
     top: "50%",
@@ -25,3 +25,5 @@ export default {
     },
   },
 };
+
+export default swiper;

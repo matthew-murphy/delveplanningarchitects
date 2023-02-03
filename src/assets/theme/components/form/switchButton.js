@@ -14,7 +14,7 @@ const { white, gradients, grey, transparent } = colors;
 const { borderWidth } = borders;
 const { md } = boxShadows;
 
-export default {
+const switchButton = {
   defaultProps: {
     disableRipple: false,
   },
@@ -71,3 +71,5 @@ export default {
     checked: {},
   },
 };
+
+export default switchButton;

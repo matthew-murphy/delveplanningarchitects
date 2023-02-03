@@ -1,5 +1,3 @@
-
-
 // Material Kit 2 PRO React base styles
 import colors from "assets/theme/base/colors";
 
@@ -9,7 +7,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 
 const { dark, white } = colors;
 
-export default {
+const divider = {
   styleOverrides: {
     root: {
       background: rgba(dark.main, 0.2),
@@ -36,3 +34,5 @@ export default {
     },
   },
 };
+
+export default divider;
