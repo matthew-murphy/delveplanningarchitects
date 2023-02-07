@@ -23,7 +23,7 @@ function Information() {
                   <DefaultInfoCard
                     icon="public"
                     title="Fully integrated"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    description="fully integrated with the rest of the platform, so you can build your app faster"
                   />
                 </MKBox>
               </Grid>
@@ -32,7 +32,7 @@ function Information() {
                   <DefaultInfoCard
                     icon="payments"
                     title="Payments functionality"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    description="fully integrated with the rest of the platform, so you can build your app faster"
                   />
                 </MKBox>
               </Grid>
@@ -41,7 +41,7 @@ function Information() {
                   <DefaultInfoCard
                     icon="apps"
                     title="Prebuilt components"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    description="payments functionality, fully integrated with the rest of the platform, so you can build your app faster"
                   />
                 </MKBox>
               </Grid>
@@ -50,7 +50,7 @@ function Information() {
                   <DefaultInfoCard
                     icon="3p"
                     title="Improved platform"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    description="payments functionality, fully integrated with the rest of the platform, so you can build your app faster"
                   />
                 </MKBox>
               </Grid>

@@ -1,7 +1,5 @@
-import React from 'react';
 import { Grid, Container } from '@mui/material';
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import SimpleInfoCard from 'examples/Cards/InfoCards/SimpleInfoCard';
 
 export default function InfoSection() {

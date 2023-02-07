@@ -9,7 +9,7 @@ import MKTypography from "components/MKTypography";
 import image1 from "assets/images/undraw_void_-3-ggu.svg";
 
 // Component
-import IconContent from "../components/IconContent";
+import IconContent from "components/IconContent";
 
 function ChallengesSection() {
   return (

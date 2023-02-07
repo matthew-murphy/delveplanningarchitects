@@ -13,9 +13,9 @@ import MKTypography from "components/MKTypography";
 import bgImage from "assets/images/blue_bird.webp";
 import theme from "assets/theme";
 
-function Header({ title, subtitle, buttonLabels, buttonLinks, mixedVariants, backgroundImage, backgroundImageStyle }) {
+function Header({ title, subtitle, buttonLabels, buttonLinks, mixedVariants, backgroundImage, backgroundImageStyle, quote, author }) {
   const headerRef = useRef(null);
-  const background = ({ palette: { gradients }, functions: { linearGradient, rgba } }) => `${linearGradient(rgba(gradients.dark.main, 0.5), rgba(gradients.dark.state, 0.5))}, url(${backgroundImage})`;
+  const background = ({ palette: { gradients }, functions: { linearGradient, rgba } }) => `${linearGradient(rgba(gradients.dark.main, 0.85), rgba(gradients.dark.state, 0.85))}, url(${backgroundImage})`;
   
   // Setting up rellax
   useEffect(() => {
@@ -31,14 +31,13 @@ function Header({ title, subtitle, buttonLabels, buttonLinks, mixedVariants, bac
       <MKBox
         display="flex"
         alignItems="center"
-        minHeight="80vh"
-        sx={ backgroundImageStyle ? backgroundImageStyle 
-        : {
+        minHeight="85vh"
+        sx={{
           backgroundColor: "black",
           backgroundSize: "cover",
-          backgroundPosition: "top right",
+          backgroundPosition: "top center",
           [theme.breakpoints.up("lg")]: {
-            backgroundImage: `url(${backgroundImage})`,
+            backgroundImage: background,
           },
           [theme.breakpoints.down("lg")]: {
             backgroundImage: background,
@@ -51,28 +50,49 @@ function Header({ title, subtitle, buttonLabels, buttonLinks, mixedVariants, bac
               container
               item
               xs={12} 
-              md={7} 
-              lg={6}
+              md={10} 
+              lg={10}
               flexDirection="column"
               justifyContent="center"
             >
             <MKTypography
-              variant="h1"
+              variant="title"
               color="white"
-              mb={3}
               py={0.8125}
               mr={2}
               sx={({ breakpoints, typography: { size } }) => ({
                 [breakpoints.down("md")]: {
-                  fontSize: size["3xl"],
+                  marginTop: 3,
                 },
               })}
             >
               {title}
             </MKTypography>
-            <MKTypography variant="body1" color="white" opacity={0.8} pr={6} mr={6}>
+            <MKTypography variant="h1" color="white" opacity={0.8} pr={6} mr={6} mb={2}>
               {subtitle} {" "}
             </MKTypography>
+            {quote ? (
+              <MKTypography 
+                variant="body1" 
+                color="white" 
+                opacity={0.8} 
+                pr={6} 
+                mr={6}
+              >
+                {quote}
+              <MKTypography 
+                variant="em" 
+                color="white" 
+                opacity={0.8} 
+                pr={6} 
+                mr={6} 
+                sx={{flexDirection: 'row-reverse', display: 'flex',}}
+              >
+                {author}
+              </MKTypography>
+              </MKTypography>
+              ) : <></>
+            }
             {buttonLabels && buttonLinks ? (
               <Stack direction="row" spacing={1} mt={3}>
                 {buttonLabels.map((label, i) => (
@@ -100,7 +120,11 @@ Header.propTypes = {
   subtitle: PropTypes.string,
   buttonLabels: PropTypes.array,
   buttonLinks: PropTypes.array,
-  mixedVariants: PropTypes.bool
+  mixedVariants: PropTypes.bool,
+  backgroundImage: PropTypes.string,
+  backgroundImageStyle: PropTypes.object,
+  quote: PropTypes.string,
+  author: PropTypes.string,
 };
 
 Header.defaultProps = {

@@ -10,6 +10,12 @@ ISSUE_TEMPLATE.md
 # Environment variables
 .env
 .vscode/
+src/firebaseConfig.js
+.firebase
+firebase.json
+
+# production
+/build
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
