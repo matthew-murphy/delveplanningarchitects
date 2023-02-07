@@ -12,11 +12,8 @@ import MKTypography from "components/MKTypography";
 import HorizontalTeamCard from "examples/Cards/TeamCards/HorizontalTeamCard";
 
 // Images
-import team1 from "assets/images/team-5.jpg";
-import team2 from "assets/images/bruce-mars.jpg";
-import team3 from "assets/images/ivana-squares.jpg";
-import team4 from "assets/images/ivana-square.jpg";
-
+import profilePic from "assets/images/debbie_img.png";
+import profilePic2 from "assets/images/kim_img.png";
 function Team() {
   return (
     <MKBox
@@ -32,11 +29,10 @@ function Team() {
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="white">
-              The Executive Team
+              Your success is my success.
             </MKTypography>
             <MKTypography variant="body2" color="white" opacity={0.8}>
-              There&apos;s nothing I really wanted to do in life that I wasn&apos;t able to get good
-              at. That&apos;s my skill.
+              A Passion for enabling leaders in an organization to view their business from a new perspective.
             </MKTypography>
           </Grid>
         </Grid>
@@ -44,43 +40,43 @@ function Team() {
           <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
-                image={team1}
-                name="Emma Roberts"
-                position={{ color: "info", label: "UI Designer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                image={profilePic}
+                name="Debbie Climber"
+                position={{ color: "info", label: "Partner" }}
+                description={
+                  <ul>
+                    <li>Cummins Inc. Director of Global Integrated Business planning</li>
+                    <li>Experienced in leading and deploying IBP in a variety of different businesses in multiple regions around the globe.</li>
+                    <li>25 years of industry  experience in operations, Quality, auditing, finance, and all aspects of IBP. </li>
+                    <li>With this experience,  encountered many adversities that come with implementation and have accumulated a long list of common potential failure modes and how to resolve or avoid them altogether. </li>
+                    <li>BS in business from Indiana University. </li>
+                    <li>MBA from Ball State University focused on finance.  BS in business from Kelley School of business IU.</li>
+                  </ul>                
+                }
               />
             </MKBox>
           </Grid>
-          <Grid item xs={12} lg={6}>
+          {/* <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
-                image={team2}
-                name="William Pearce"
-                position={{ color: "info", label: "Boss" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                image={profilePic2}
+                name="Kim Britton"
+                position={{ color: "info", label: "Partner" }}
+                description={
+                  <ul>
+                    <li>Personal Journey in Planning & Materials Management</li>
+                    <li>Honeywell Exec Director Planning </li>
+                    <li>3M Inc.: Global Division IBP Deployment Director</li>
+                    <li>3M GMbH.: Region IBP Deployment Director</li>
+                    <li>Cummins Engine Inc: Director IBP,  Capability Ldr </li>
+                    <li>Ford of Japan: S&OP/E Leader</li>
+                    <li>Ford of Europe: S&OP Deployment Ldr</li>
+                    <li>Royal Navy: Engineering & Logistics </li>
+                  </ul>                
+                }
               />
             </MKBox>
-          </Grid>
-          <Grid item xs={12} lg={6}>
-            <MKBox mb={{ xs: 1, lg: 0 }}>
-              <HorizontalTeamCard
-                image={team3}
-                name="Ivana Flow"
-                position={{ color: "info", label: "Athlete" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
-              />
-            </MKBox>
-          </Grid>
-          <Grid item xs={12} lg={6}>
-            <MKBox mb={{ xs: 1, lg: 0 }}>
-              <HorizontalTeamCard
-                image={team4}
-                name="Marquez Garcia"
-                position={{ color: "info", label: "JS Developer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
-              />
-            </MKBox>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </MKBox>

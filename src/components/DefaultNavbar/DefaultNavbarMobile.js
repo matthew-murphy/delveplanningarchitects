@@ -1,9 +1,10 @@
 
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
@@ -25,23 +26,28 @@ function DefaultNavbarMobile({ routes, open }) {
   const handleSetCollapse = (name) => (collapse === name ? setCollapse(false) : setCollapse(name));
 
   const renderNavbarItems = routes.map(
-    ({ name, icon, collapse: routeCollapses, href, route, collapse: navCollapse }) => (
+    ({ name, icon, collapse: routeCollapses, href, route, collapse: navCollapse }) => {
+      return (
       <DefaultNavbarDropdown
         key={name}
         name={name}
         icon={icon}
         collapseStatus={name === collapse}
-        onClick={() => handleSetCollapse(name)}
+        onClick={() => {
+          handleSetCollapse(name)
+          // close the navbar after clicking on a link
+          open(false);
+        }}
         href={href}
         route={route}
         collapse={Boolean(navCollapse)}
       >
-        <MKBox sx={{ height: "15rem", maxHeight: "15rem", overflowY: "scroll" }}>
           {routeCollapses &&
             routeCollapses.map((item) => (
               <MKBox key={item.name} px={2}>
                 {item.collapse ? (
                   <>
+                  <MKBox sx={{ height: "15rem", maxHeight: "15rem", overflowY: "scroll" }}>
                     <MKTypography
                       display="block"
                       variant="button"
@@ -82,6 +88,7 @@ function DefaultNavbarMobile({ routes, open }) {
                         {el.name}
                       </MKTypography>
                     ))}
+                  </MKBox>
                   </>
                 ) : (
                   <MKBox
@@ -130,9 +137,8 @@ function DefaultNavbarMobile({ routes, open }) {
                 )}
               </MKBox>
             ))}
-        </MKBox>
       </DefaultNavbarDropdown>
-    )
+    )}
   );
 
   return (

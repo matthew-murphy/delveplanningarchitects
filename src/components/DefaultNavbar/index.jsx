@@ -517,6 +517,7 @@ const DefaultNavbar = ({ brand, routes, transparent, light, action, sticky, rela
             color={transparent ? "white" : "inherit"}
             sx={{ cursor: "pointer" }}
             onClick={openMobileNavbar}
+            className="mobile-menu"
           >
             <Icon fontSize="default">{mobileNavbar ? "close" : "menu"}</Icon>
           </MKBox>

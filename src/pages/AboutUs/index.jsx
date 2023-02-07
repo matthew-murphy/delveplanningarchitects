@@ -13,10 +13,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
-// Material Kit 2 PRO React components
-import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
-import MKButton from "components/MKButton";
+// components
+import TitleWithContent from "components/TitleWithContent";
 
 // About Us page sections
 import Information from "./sections/Information";
@@ -25,6 +23,7 @@ import Featuring from "./sections/Featuring";
 import Newsletter from "./sections/Newsletter";
 import bgImage from "assets/images/office-dark.jpg";
 import Header from "components/Headers/Header";
+import Team2 from "./sections/Team2";
 
 export default function AboutUs() {
   const background = ({ palette: { gradients }, functions: { linearGradient, rgba } }) => `${linearGradient(rgba(gradients.dark.main, 0.5), rgba(gradients.dark.state, 0.5))}, url(${bgImage})`;
@@ -33,7 +32,7 @@ export default function AboutUs() {
     <>
       <Header
         title="Work with an amazing team"
-        subtitle="We're constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game"
+        subtitle="We are Integrated Business Planning Experts."
         backgroundImage={bgImage}
         backgroundImageStyle={{
           backgroundSize: "cover",
@@ -50,10 +49,21 @@ export default function AboutUs() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
+        <TitleWithContent
+          id="learn-more"
+          label="About Us"
+          title="Combined 50 years of industry experience "
+          content="Planning is the process of thinking, combining math and art, 
+          integrating numbers and assumptions and merging facts and opinion. 
+          Planning is about defining a path towards an objective and being agile 
+          in response to inevitable deviations. Planning is based on foresight, 
+          projections informed by today's performance. Planning is a fundamental 
+          property of successful behavior. It involves the use of logic and 
+          imagination to visualize a desired state and the necessary actions to 
+          achieve that objective."
+        />
         <Information />
         <Team />
-        <Featuring />
-        <Newsletter />
       </Card>
     </>
   );

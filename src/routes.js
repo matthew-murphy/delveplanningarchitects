@@ -32,7 +32,6 @@ import AboutUs from "pages/AboutUs/index.jsx";
 import Services from "pages/Services/index.jsx";
 
 const routes = [
-
   {
     name: "home",
     icon: <Icon>home</Icon>,

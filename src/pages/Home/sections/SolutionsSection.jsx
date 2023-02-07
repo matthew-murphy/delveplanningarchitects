@@ -9,7 +9,7 @@ import MKTypography from "components/MKTypography";
 import image1 from "assets/images/undraw_segmentation_re_gduq (1).svg";
 
 // Component
-import IconContent from "../components/IconContent";
+import IconContent from "components/IconContent";
 
 function SolutionsSection() {
   return (
