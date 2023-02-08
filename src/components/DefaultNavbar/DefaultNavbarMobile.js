@@ -1,10 +1,7 @@
-
-
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 // react-router components
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
