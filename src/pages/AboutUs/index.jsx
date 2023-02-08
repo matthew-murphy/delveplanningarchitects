@@ -1,16 +1,3 @@
-
-
-import { useEffect, useRef } from "react";
-
-// rellax
-import Rellax from "rellax";
-
-// typed-js
-import * as Typed from "typed.js";
-
-// @mui material components
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
 // components
@@ -19,11 +6,8 @@ import TitleWithContent from "components/TitleWithContent";
 // About Us page sections
 import Information from "./sections/Information";
 import Team from "./sections/Team";
-import Featuring from "./sections/Featuring";
-import Newsletter from "./sections/Newsletter";
 import bgImage from "assets/images/office-dark.jpg";
 import Header from "components/Headers/Header";
-import Team2 from "./sections/Team2";
 
 export default function AboutUs() {
   const background = ({ palette: { gradients }, functions: { linearGradient, rgba } }) => `${linearGradient(rgba(gradients.dark.main, 0.5), rgba(gradients.dark.state, 0.5))}, url(${bgImage})`;
