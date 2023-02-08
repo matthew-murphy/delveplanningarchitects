@@ -54,6 +54,7 @@ function Header({ title, subtitle, buttonLabels, buttonLinks, mixedVariants, bac
               lg={10}
               flexDirection="column"
               justifyContent="center"
+              mb={10}
             >
             <MKTypography
               variant="title"

@@ -519,7 +519,7 @@ const DefaultNavbar = ({ brand, routes, transparent, light, action, sticky, rela
               onClick={openMobileNavbar}
               className="mobile-menu"
             >
-              <Icon fontSize="large">{mobileNavbar ? "close" : "menu"}</Icon>
+              <Icon fontSize="inherit">{mobileNavbar ? "close" : "menu"}</Icon>
             </MKBox>
         </MKBox>
         <MKBox
