@@ -439,7 +439,6 @@ const DefaultNavbar = ({ brand, routes, transparent, light, action, sticky, rela
   return (
     <Container sx={sticky ? { position: "sticky", top: 0, zIndex: 10 } : null}>
       <MKBox
-        py={1}
         px={{ xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 2 }}
         my={relative ? 0 : 2}
         mx={relative ? 0 : 3}
@@ -460,12 +459,13 @@ const DefaultNavbar = ({ brand, routes, transparent, light, action, sticky, rela
             component={Link}
             to="/"
             lineHeight={1}
-            py={transparent ? 1.5 : 0.75}
+            // py={transparent ? 1.5 : 0.75}
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
           >
-            <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-              {brand}
-            </MKTypography>
+            <MKBox component="img" src={brand.image} alt={brand.name} mb={-2} mt={-1} 
+              // change width of logo on mobile
+              width={{ xs: "100px", sm: "120px", md: "140px", lg: "160px" }}
+            />
           </MKBox>
           <MKBox
             color="inherit"
@@ -509,24 +509,25 @@ const DefaultNavbar = ({ brand, routes, transparent, light, action, sticky, rela
                 </MKButton>
               ))}
           </MKBox>
-          <MKBox
-            display={{ xs: "inline-block", lg: "none" }}
-            lineHeight={0}
-            py={1.5}
-            pl={1.5}
-            color={transparent ? "white" : "inherit"}
-            sx={{ cursor: "pointer" }}
-            onClick={openMobileNavbar}
-            className="mobile-menu"
-          >
-            <Icon fontSize="default">{mobileNavbar ? "close" : "menu"}</Icon>
-          </MKBox>
+            <MKBox
+              display={{ xs: "inline-block", lg: "none" }}
+              lineHeight={0}
+              py={1.5}
+              pl={1.5}
+              color={transparent ? "black" : "inherit"}
+              sx={{ cursor: "pointer" }}
+              onClick={openMobileNavbar}
+              className="mobile-menu"
+            >
+              <Icon fontSize="large">{mobileNavbar ? "close" : "menu"}</Icon>
+            </MKBox>
         </MKBox>
         <MKBox
           bgColor={transparent ? "white" : "transparent"}
           shadow={transparent ? "lg" : "none"}
           borderRadius="xl"
           px={transparent ? 2 : 0}
+          mb={mobileNavbar ? 2 : 0}
         >
           {mobileView && <DefaultNavbarMobile routes={routes} open={mobileNavbar} />}
         </MKBox>
@@ -539,7 +540,11 @@ const DefaultNavbar = ({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "LOGO | Delve Planning Architects",
+  brand: {
+    name: "Delve Planning Architects",
+    image: require("assets/images/DelveLogo.svg").default,
+    route: "/",
+  },
   transparent: false,
   light: false,
   action: false,
@@ -550,7 +555,7 @@ DefaultNavbar.defaultProps = {
 
 // Typechecking props for the DefaultNavbar
 DefaultNavbar.propTypes = {
-  brand: PropTypes.string,
+  brand: PropTypes.object,
   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
   transparent: PropTypes.bool,
   light: PropTypes.bool,

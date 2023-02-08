@@ -43,9 +43,9 @@ export default function App() {
       <CssBaseline />
       <DefaultNavbar
         routes={routes}
+        dark
+        relative
         transparent
-        absolute
-        light
       />
       <Routes>
         {getRoutes(routes)}
