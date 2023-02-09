@@ -2,6 +2,8 @@ import ContactForm from "components/Contact";
 import { Card } from "@mui/material";
 import Header from "components/Headers/Header";
 import bgImage from "assets/images/nastuh.jpg";
+import InfoSection from "./sections/InfoSection";
+import TitleWithContent from "components/TitleWithContent";
 
 export default function Services() {
   const background = ({ palette: { gradients }, functions: { linearGradient, rgba } }) => `${linearGradient(rgba(gradients.dark.main, 0.8), rgba(gradients.dark.state, 0.8))}, url(${bgImage})`;
@@ -27,6 +29,15 @@ export default function Services() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
+        <TitleWithContent 
+          id="learn-more"
+          label="Our Services"
+          title="We offer a variety of services to help you achieve your goals."
+          content="We offer a variety of services to help you achieve your goals.
+          We offer a variety of services to help you achieve your goals.
+          We offer a variety of services to help you achieve your goals."
+        />
+        <InfoSection />
         <ContactForm />
       </Card>
     </>
