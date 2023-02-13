@@ -6,7 +6,7 @@ import MKTypography from 'components/MKTypography';
 
 export default function TitleWithContent({ label, title, content, id }) {
   return (
-    <MKBox id={id} component="section" py={6}>
+    <MKBox id={id} component="section" pt={6} pb={2.5}>
       <Container>
         <Grid
           container
@@ -31,7 +31,7 @@ export default function TitleWithContent({ label, title, content, id }) {
           >
             {title}
           </MKTypography>
-          <MKTypography variant="body2" color="text">
+          <MKTypography variant="body1" color="text">
             {content}
           </MKTypography>
         </Grid>

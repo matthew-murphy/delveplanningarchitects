@@ -10,7 +10,7 @@ import Icon from "@mui/material/Icon";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-function SimpleInfoCard({ color, icon, title, description, direction }) {
+function SimpleInfoCard({ color, icon, title, description, direction, link }) {
   let alignment = "flex-start";
 
   if (direction === "center") {
@@ -39,6 +39,12 @@ function SimpleInfoCard({ color, icon, title, description, direction }) {
         color="white"
         bgColor={color}
         coloredShadow={color}
+        sx={{ cursor: link ? "pointer" : "default" }}
+        onClick={() => {
+          if (link) {
+            window.open(link, "_blank");
+          }
+        }}
       >
         {typeof icon === "string" ? <Icon fontSize="small">{icon}</Icon> : icon}
       </MKBox>
@@ -74,6 +80,7 @@ SimpleInfoCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   direction: PropTypes.oneOf(["left", "right", "center"]),
+  link: PropTypes.string,
 };
 
 export default SimpleInfoCard;

@@ -3,6 +3,7 @@ import { Card } from "@mui/material";
 import Header from "components/Headers/Header";
 import bgImage from "assets/images/nastuh.jpg";
 import InfoSection from "./sections/InfoSection";
+import WhyUsSection from "./sections/WhyUsSection"
 import TitleWithContent from "components/TitleWithContent";
 
 export default function Services() {
@@ -38,6 +39,7 @@ export default function Services() {
           We offer a variety of services to help you achieve your goals."
         />
         <InfoSection />
+        <WhyUsSection />
         <ContactForm />
       </Card>
     </>

@@ -13,12 +13,16 @@ import MuiLink from "@mui/material/Link";
 // Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
+import { height } from "@mui/system";
 
-function FilledInfoCard({ variant, color, icon, title, description, action }) {
+function FilledInfoCard({ variant, color, icon, title, description, action, height }) {
   const buttonStyles = {
+    padding: "10px 0",
     width: "max-content",
     display: "flex",
     alignItems: "center",
+    position: {xs: "relative", md: "absolute", xl: "absolute"},
+    bottom: "16px",
 
     "& .material-icons-round": {
       fontSize: "1.125rem",
@@ -41,6 +45,7 @@ function FilledInfoCard({ variant, color, icon, title, description, action }) {
 
   return (
     <MKBox
+      sx={ height ? { minHeight: {xs: "100%", md: height, xl: height} } : null }
       display={{ xs: "block", md: "flex" }}
       variant={variant}
       bgColor={variant === "contained" ? "grey-100" : color}
@@ -116,6 +121,7 @@ FilledInfoCard.defaultProps = {
 
 // Typechecking props for the FilledInfoCard
 FilledInfoCard.propTypes = {
+  height: PropTypes.string,
   variant: PropTypes.oneOf(["contained", "gradient"]),
   color: PropTypes.oneOf([
     "primary",

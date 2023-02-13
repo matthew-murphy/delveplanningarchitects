@@ -34,7 +34,7 @@ function SolutionsSection() {
             sx={{ my: 'auto', py: 2, pr: { xs: 3, lg: 2 }, pl: { xs: 3, lg: 0 } }}
           >
             <MKTypography variant="h2" color="white" mb={3}>
-              Why Us?
+              Designing change based on your unique business requirements
             </MKTypography>
             <MKTypography variant="body2" color="white" opacity={0.8}>
               IBP is provocative, challenging, and, at times, contentious, yet the benefits are unquestionable.
