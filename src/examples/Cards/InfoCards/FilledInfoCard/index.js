@@ -13,7 +13,6 @@ import MuiLink from "@mui/material/Link";
 // Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import { height } from "@mui/system";
 
 function FilledInfoCard({ variant, color, icon, title, description, action, height }) {
   const buttonStyles = {
