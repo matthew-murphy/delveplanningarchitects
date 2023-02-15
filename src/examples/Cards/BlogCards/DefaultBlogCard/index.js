@@ -27,6 +27,7 @@ function DefaultBlogCard({ image, category, title, description, author, raised, 
         width="100%"
         position="relative"
         zIndex={1}
+        height={"280px"}
       />
       <MKBox
         borderRadius="lg"

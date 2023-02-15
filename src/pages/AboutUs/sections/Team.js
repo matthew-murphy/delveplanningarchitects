@@ -24,12 +24,16 @@ function Team() {
       py={6}
       px={{ xs: 2, lg: 0 }}
       mx={-2}
+      sx={{
+        borderBottomRightRadius: "8px",
+        borderBottomLeftRadius: "8px",
+      }}
     >
       <Container>
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="white">
-              Your success is my success.
+              Your success is our success.
             </MKTypography>
             <MKTypography variant="body2" color="white" opacity={0.8}>
               A Passion for enabling leaders in an organization to view their business from a new perspective.

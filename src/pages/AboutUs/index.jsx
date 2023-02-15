@@ -5,6 +5,7 @@ import TitleWithContent from "components/TitleWithContent";
 
 // About Us page sections
 import Information from "./sections/Information";
+import BlogSection from "./sections/BlogSection";
 import Team from "./sections/Team";
 import bgImage from "assets/images/office-dark.jpg";
 import Header from "components/Headers/Header";
@@ -27,6 +28,7 @@ export default function AboutUs() {
       <Card
         sx={{
           p: 2,
+          pb: 0,
           mx: { xs: 2, lg: 3 },
           mt: -8,
           mb: 4,
@@ -46,7 +48,8 @@ export default function AboutUs() {
           imagination to visualize a desired state and the necessary actions to 
           achieve that objective."
         />
-        <Information />
+        {/* <Information /> */}
+        <BlogSection />
         <Team />
       </Card>
     </>
