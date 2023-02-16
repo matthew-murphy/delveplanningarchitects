@@ -14,6 +14,7 @@ import DefaultBlogCard from "examples/Cards/BlogCards/DefaultBlogCard";
 
 function BlogSection() {
   const [posts, setPosts] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(3);
