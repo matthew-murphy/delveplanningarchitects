@@ -79,7 +79,7 @@ function BlogSection() {
             </Grid>
           ))}
         </Grid>
-        <MKBox mt={5}>
+        <MKBox mt={5} sx={{ display: "flex", justifyContent: "center" }}>
           <MKPagination>
             <MKPagination item
               onClick={() => {
@@ -91,7 +91,7 @@ function BlogSection() {
               <Icon>keyboard_arrow_left</Icon>
             </MKPagination>
             {pageNumbers.map((number) => (
-              <MKPagination item active={number === currentPage} onClick={() => paginate(number)}>
+              <MKPagination item active={number === currentPage} onClick={() => paginate(number)} sx={{ display: {xs: 'none', md: 'flex', xl: 'flex'}}}>
                 {number}
               </MKPagination>
             ))}

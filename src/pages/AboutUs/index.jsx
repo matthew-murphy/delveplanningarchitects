@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import TitleWithContent from "components/TitleWithContent";
 
 // About Us page sections
-import Information from "./sections/Information";
 import BlogSection from "./sections/BlogSection";
 import Team from "./sections/Team";
 import bgImage from "assets/images/office-dark.jpg";
@@ -48,7 +47,6 @@ export default function AboutUs() {
           imagination to visualize a desired state and the necessary actions to 
           achieve that objective."
         />
-        {/* <Information /> */}
         <BlogSection />
         <Team />
       </Card>
