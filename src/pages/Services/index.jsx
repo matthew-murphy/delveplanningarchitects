@@ -6,7 +6,7 @@ import InfoSection from "./sections/InfoSection";
 import WhyUsSection from "./sections/WhyUsSection"
 import TitleWithContent from "components/TitleWithContent";
 import image1 from "assets/images/image1.png";
-import image2 from "assets/images/flow-chart.png";
+import image2 from "assets/images/chart.png";
 
 export default function Services() {
   const background = ({ palette: { gradients }, functions: { linearGradient, rgba } }) => `${linearGradient(rgba(gradients.dark.main, 0.8), rgba(gradients.dark.state, 0.8))}, url(${bgImage})`;

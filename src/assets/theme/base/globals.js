@@ -31,6 +31,10 @@ const globals = {
   "a.link:hover, .link:hover, a.link:focus, .link:focus": {
     color: `${info.main} !important`,
   },
+  // hide recaptcha badge
+  ".grecaptcha-badge": {
+    visibility: "hidden",
+  },
   // reduce the font size for tablet screens
   "@media (max-width: 960px)": {
     '#root': {
