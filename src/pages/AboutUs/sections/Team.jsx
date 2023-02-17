@@ -48,7 +48,7 @@ function Team() {
                 name="Debbie Climer"
                 position={{ color: "info", label: "Partner" }}
                 description={
-                  <ul>
+                  <ul style={{ paddingBottom: "16px"}}>
                     <li>Cummins Inc. Director of Global Integrated Business planning</li>
                     <li>Experienced in leading and deploying IBP in a variety of different businesses in multiple regions around the globe.</li>
                     <li>25 years of industry  experience in operations, Quality, auditing, finance, and all aspects of IBP. </li>
@@ -67,7 +67,7 @@ function Team() {
                 name="Kim Britton"
                 position={{ color: "info", label: "Partner" }}
                 description={
-                  <ul>
+                  <ul style={{ paddingBottom: "16px"}}>
                     <li>Personal Journey in Planning & Materials Management</li>
                     <li>Honeywell Exec Director Planning </li>
                     <li>3M Inc.: Global Division IBP Deployment Director</li>

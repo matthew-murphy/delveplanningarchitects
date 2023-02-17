@@ -1,7 +1,6 @@
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import CheckIcon from "@mui/icons-material/Check";
 
 // Material Kit 2 PRO React components
 import MKBox from "components/MKBox";

@@ -2,7 +2,6 @@ import { Grid, Container } from '@mui/material';
 import MKBox from 'components/MKBox';
 import MKTypography from 'components/MKTypography';
 import SimpleInfoCard from 'examples/Cards/InfoCards/SimpleInfoCard';
-import image1 from "assets/images/image1.png";
 
 export default function InfoSection({ title, description, image }) {
   return (

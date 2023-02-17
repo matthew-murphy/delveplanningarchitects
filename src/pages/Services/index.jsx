@@ -5,7 +5,6 @@ import bgImage from "assets/images/nastuh.jpg";
 import InfoSection from "./sections/InfoSection";
 import WhyUsSection from "./sections/WhyUsSection"
 import TitleWithContent from "components/TitleWithContent";
-import CardRotate from "./sections/CardRotate";
 import image1 from "assets/images/image1.png";
 import image2 from "assets/images/flow-chart.png";
 

@@ -8,12 +8,10 @@ import MKBox from "components/MKBox";
 import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
-import image1 from "assets/images/image1.png";
-import image2 from "assets/images/flowChart.png";
 
 // Images
-import bgFront from "assets/images/rotating-card-bg-front.jpeg";
-import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+import image1 from "assets/images/image1.png";
+import image2 from "assets/images/flowChart.png";
 
 function CardRotate() {
   return (
