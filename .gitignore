@@ -9,15 +9,16 @@ CHANGELOG.md
 ISSUE_TEMPLATE.md
 
 # Environment variables
+database.rules.json
+firestore.indexes.json
+firestore.rules
 .env
 .vscode/
 src/firebaseConfig.js
 firebase.json
 .firebaserc
 .firebase
-database.rules.json
-firestore.indexes.json
-firestore.rules
+
 
 # production
 /build
