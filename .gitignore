@@ -4,6 +4,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
 CHANGELOG.md
 ISSUE_TEMPLATE.md
 
@@ -11,9 +12,9 @@ ISSUE_TEMPLATE.md
 .env
 .vscode/
 src/firebaseConfig.js
-.firebase
-.firebaserc
 firebase.json
+.firebaserc
+.firebase
 
 # production
 /build
