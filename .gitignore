@@ -12,6 +12,7 @@ ISSUE_TEMPLATE.md
 .vscode/
 src/firebaseConfig.js
 .firebase
+.firebaserc
 firebase.json
 
 # production
