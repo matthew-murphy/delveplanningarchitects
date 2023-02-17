@@ -7,7 +7,7 @@ import InfoSection from "./sections/InfoSection";
 import TitleWithContent from "components/TitleWithContent";
 import WhyUsSection from "./sections/WhyUsSection";
 import ContactForm from "components/Contact";
-import bgImage from "assets/images/bg38.jpg";
+import bgImage from "assets/images/chess.jpg";
 
 export default function Home() {
 

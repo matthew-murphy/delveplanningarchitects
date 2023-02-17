@@ -1,7 +1,7 @@
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import CheckIcon from '@mui/icons-material/Check';
+import CheckIcon from "@mui/icons-material/Check";
 
 // Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
@@ -34,7 +34,7 @@ function SolutionsSection() {
             sx={{ my: 'auto', py: 2, pr: { xs: 3, lg: 2 }, pl: { xs: 3, lg: 0 } }}
           >
             <MKTypography variant="h2" color="white" mb={3}>
-              Designing change based on your unique business requirements
+              Why Us?
             </MKTypography>
             <MKTypography variant="body2" color="white" opacity={0.8}>
               IBP is provocative, challenging, and, at times, contentious, yet the benefits are unquestionable.

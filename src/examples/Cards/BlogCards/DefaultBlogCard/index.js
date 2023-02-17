@@ -27,6 +27,7 @@ function DefaultBlogCard({ image, category, title, description, author, raised, 
         width="100%"
         position="relative"
         zIndex={1}
+        height={"280px"}
       />
       <MKBox
         borderRadius="lg"
@@ -77,10 +78,11 @@ function DefaultBlogCard({ image, category, title, description, author, raised, 
         {action.type === "internal" ? (
           <Link to={action.route}>
             <MKTypography
+              minHeight={"3.438rem"}
               variant="h5"
               textTransform="capitalize"
               my={1}
-              sx={{ display: "inline-block" }}
+              sx={{ display: "inline-block"}}
             >
               {title}
             </MKTypography>
@@ -88,6 +90,7 @@ function DefaultBlogCard({ image, category, title, description, author, raised, 
         ) : (
           <MuiLink href={action.route} target="_blank" rel="noreferrer">
             <MKTypography
+              minHeight={"3.438rem"}
               variant="h5"
               textTransform="capitalize"
               mt={2}

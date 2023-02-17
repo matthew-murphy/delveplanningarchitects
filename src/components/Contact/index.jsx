@@ -1,11 +1,99 @@
-import React from 'react'
-import { Grid } from '@mui/material'
-import MKBox from 'components/MKBox'
-import MKTypography from 'components/MKTypography'
-import MKInput from 'components/MKInput'
-import MKButton from 'components/MKButton'
+import React, {useEffect, useState}from 'react';
+import { Grid } from '@mui/material';
+import MKAlert from 'components/MKAlert';
+import MKBox from 'components/MKBox';
+import MKTypography from 'components/MKTypography';
+import MKInput from 'components/MKInput';
+import MKButton from 'components/MKButton';
+import { analytics } from 'firebaseConfig';
+
 
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
+
+  const updateInput = e => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+  
+  // handle form submit
+  const handleSubmit = event => {
+    event.preventDefault()
+    window.grecaptcha.ready(() => {
+      window.grecaptcha
+        .execute(process.env.REACT_APP_SITE_KEY, { action: 'submit' })
+        .then(token => {
+          setLoading(true)
+          sendEmail(token)
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+          })
+        })
+    })
+  }
+
+  // call cloud function to send email
+  const sendEmail = async (token) => {
+    const url = process.env.REACT_APP_FIREBASE_CLOUD_FUNCTION_URL + '/sendEmail'
+    const response = await fetch(url, {
+      mode: 'cors',
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        "Allow-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+      },
+      body: JSON.stringify({
+        "name": formData.name,
+        "email": formData.email,
+        "message": formData.message,
+        "g-recaptcha-response": token
+      })
+    }).then(res => {
+        analytics.logEvent('contact_form_submitted')
+        setLoading(false)
+        setSuccess(true)
+        return res
+    }).catch(error => {
+      setError(true)
+      setLoading(false)
+    })
+    return response
+  }
+  
+  useEffect(() => {
+    const loadScriptByURL = (id, url, callback) => {
+      const isScriptExist = document.getElementById(id);
+ 
+      if (!isScriptExist) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = url;
+        script.id = id;
+        script.onload = function () {
+          if (callback) callback();
+        };
+        document.body.appendChild(script);
+      }
+ 
+      if (isScriptExist && callback) callback();
+    }
+    // load the script by passing the URL
+    loadScriptByURL("recaptcha-key", `https://www.google.com/recaptcha/api.js?render=${process.env.REACT_APP_SITE_KEY}`);
+  }, []);
+
   return (
     <Grid container spacing={3} alignItems="center" justifyContent={"center"}>
       <Grid
@@ -44,10 +132,18 @@ export default function ContactForm() {
               We are here to help you. Please fill out the form below and we will
               get back to you as soon as possible.
             </MKTypography>
-            <MKBox width="100%" component="form" method="post" autocomplete="off">
+            <MKBox 
+              width="100%" 
+              component="form" 
+              // method="post" 
+              autocomplete="off" 
+            >
               <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
                   <MKInput
+                    name="name"
+                    onChange={updateInput} 
+                    value={formData.name}
                     variant="standard"
                     label="Full Name"
                     InputLabelProps={{ shrink: true }}
@@ -56,6 +152,10 @@ export default function ContactForm() {
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <MKInput
+                    name="email"
+                    onChange={updateInput}
+                    value={formData.email}
+                    error={formData.email && !formData.email.includes('@') ? true : false}
                     type="email"
                     variant="standard"
                     label="Email"
@@ -65,6 +165,9 @@ export default function ContactForm() {
                 </Grid>
                 <Grid item xs={12}>
                   <MKInput
+                    name="message"
+                    onChange={updateInput}
+                    value={formData.message}
                     variant="standard"
                     label="What can we help you?"
                     placeholder="Describe your problem in at least 250 characters"
@@ -75,13 +178,36 @@ export default function ContactForm() {
                   />
                 </Grid>
               </Grid>
+              <MKTypography
+                variant="caption"
+                color="text"
+                mt={2}
+                mb={2}
+                textAlign="center"
+              >
+                This site is protected by reCAPTCHA and the Google 
+                <a href="https://policies.google.com/privacy"> Privacy Policy</a> and 
+                <a href="https://policies.google.com/terms"> Terms of Service</a> apply.
+              </MKTypography>
               <Grid container item justifyContent="center" xs={12} mt={5} mb={2}>
-                <MKButton type="submit" variant="gradient" color="info">
-                  Send Message
+                <MKButton 
+                  type="submit" 
+                  variant="gradient" 
+                  color="info" 
+                  disabled={ !formData.name || !formData.email || !formData.message || !formData.email.includes('@') ? true : false }
+                  onClick={(e) => { 
+                    e.preventDefault()
+                    handleSubmit(e)
+                    analytics.logEvent('submit_form')
+                  }}
+                >
+                  {loading ? 'Submitting...' : 'Submit'}
                 </MKButton>
               </Grid>
             </MKBox>
           </MKBox>
+          {success && <MKAlert color="success" style={{margin: '1rem'}}>Message sent successfully!</MKAlert>}
+          {error && <MKAlert color="danger" style={{margin: '1rem'}}>There was an error sending your message. Please try again later.</MKAlert>}
         </MKBox>
       </Grid>
     </Grid>

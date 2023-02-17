@@ -50,10 +50,11 @@ function Header({ title, subtitle, buttonLabels, buttonLinks, mixedVariants, bac
               container
               item
               xs={12} 
-              md={10} 
+              md={12} 
               lg={10}
               flexDirection="column"
               justifyContent="center"
+              mb={10}
             >
             <MKTypography
               variant="title"
@@ -68,7 +69,7 @@ function Header({ title, subtitle, buttonLabels, buttonLinks, mixedVariants, bac
             >
               {title}
             </MKTypography>
-            <MKTypography variant="h1" color="white" opacity={0.8} pr={6} mr={6} mb={2}>
+            <MKTypography variant="h1" color="white" opacity={0.8} pr={0} mr={0} mb={2}>
               {subtitle} {" "}
             </MKTypography>
             {quote ? (

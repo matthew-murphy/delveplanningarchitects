@@ -1,10 +1,7 @@
-
-
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 // react-router components
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
@@ -44,7 +41,7 @@ function DefaultNavbarMobile({ routes, open }) {
       >
           {routeCollapses &&
             routeCollapses.map((item) => (
-              <MKBox key={item.name} px={2}>
+              <MKBox key={item.name} px={2} mb={1}>
                 {item.collapse ? (
                   <>
                   <MKBox sx={{ height: "15rem", maxHeight: "15rem", overflowY: "scroll" }}>

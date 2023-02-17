@@ -4,15 +4,21 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
 CHANGELOG.md
 ISSUE_TEMPLATE.md
 
 # Environment variables
+database.rules.json
+firestore.indexes.json
+firestore.rules
 .env
 .vscode/
 src/firebaseConfig.js
-.firebase
 firebase.json
+.firebaserc
+.firebase
+
 
 # production
 /build

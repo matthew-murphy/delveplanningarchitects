@@ -1,29 +1,13 @@
-
-
-import { useEffect, useRef } from "react";
-
-// rellax
-import Rellax from "rellax";
-
-// typed-js
-import * as Typed from "typed.js";
-
-// @mui material components
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 
 // components
 import TitleWithContent from "components/TitleWithContent";
 
 // About Us page sections
-import Information from "./sections/Information";
-import Team from "./sections/Team";
-import Featuring from "./sections/Featuring";
-import Newsletter from "./sections/Newsletter";
+import BlogSection from "./sections/BlogSection";
+import Team from "./sections/Team.jsx";
 import bgImage from "assets/images/office-dark.jpg";
 import Header from "components/Headers/Header";
-import Team2 from "./sections/Team2";
 
 export default function AboutUs() {
   const background = ({ palette: { gradients }, functions: { linearGradient, rgba } }) => `${linearGradient(rgba(gradients.dark.main, 0.5), rgba(gradients.dark.state, 0.5))}, url(${bgImage})`;
@@ -43,6 +27,7 @@ export default function AboutUs() {
       <Card
         sx={{
           p: 2,
+          pb: 0,
           mx: { xs: 2, lg: 3 },
           mt: -8,
           mb: 4,
@@ -62,7 +47,7 @@ export default function AboutUs() {
           imagination to visualize a desired state and the necessary actions to 
           achieve that objective."
         />
-        <Information />
+        <BlogSection />
         <Team />
       </Card>
     </>

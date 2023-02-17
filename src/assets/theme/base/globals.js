@@ -17,9 +17,6 @@ const globals = {
     padding: "0px",
     overflowX: "hidden", 
   },
-  '#root': {
-    overflowX: "hidden",
-  },
   "*, *::before, *::after": {
     margin: 0,
     padding: 0,
@@ -33,6 +30,43 @@ const globals = {
   },
   "a.link:hover, .link:hover, a.link:focus, .link:focus": {
     color: `${info.main} !important`,
+  },
+  // reduce the font size for tablet screens
+  "@media (max-width: 960px)": {
+    '#root': {
+      overflowX: "hidden",
+    },
+    h1: {
+      fontSize: pxToRem(40) + " !important",
+    },
+    //reduce size of h2 on tablet screens
+    h2: {
+      fontSize: pxToRem(32) + " !important",
+    },
+    //reduce size of h3 on tablet screens
+    h3: {
+      fontSize: pxToRem(24) + " !important",
+    },
+    //reduce size of h4 on tablet screens
+    h4: {
+      fontSize: pxToRem(20) + " !important",
+    },
+    //reduce size of h5 on tablet screens
+    h5: {
+      fontSize: pxToRem(18) + " !important",
+    },
+    //reduce size of p on tablet screens
+    p: {
+      fontSize: pxToRem(16) + " !important",
+    },
+    //reduce size of em on tablet screens
+    em: {
+      fontSize: pxToRem(16) + " !important",
+    },
+    //reduce size of span on tablet screens
+    span: {
+      fontSize: pxToRem(16) + " !important",
+    },
   },
   // reduce the font size for the smaller screens
   "@media (max-width: 600px)": {
