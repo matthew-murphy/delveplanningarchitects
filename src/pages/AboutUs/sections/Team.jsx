@@ -12,22 +12,28 @@ import MKTypography from "components/MKTypography";
 import HorizontalTeamCard from "examples/Cards/TeamCards/HorizontalTeamCard";
 
 // Images
-import profilePic from "assets/images/kim_img.png";
-
-function Team2() {
+import profilePic from "assets/images/debbie_img.png";
+import profilePic2 from "assets/images/kim_img.png";
+function Team() {
   return (
     <MKBox
       component="section"
+      variant="gradient"
+      bgColor="dark"
       position="relative"
       py={6}
       px={{ xs: 2, lg: 0 }}
       mx={-2}
+      sx={{
+        borderBottomRightRadius: "8px",
+        borderBottomLeftRadius: "8px",
+      }}
     >
       <Container>
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="white">
-              Your success is my success.
+              Your success is our success.
             </MKTypography>
             <MKTypography variant="body2" color="white" opacity={0.8}>
               A Passion for enabling leaders in an organization to view their business from a new perspective.
@@ -35,10 +41,29 @@ function Team2() {
           </Grid>
         </Grid>
         <Grid container spacing={3}>
-          <Grid item xs={12} lg={12}>
+          <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
                 image={profilePic}
+                name="Debbie Climer"
+                position={{ color: "info", label: "Partner" }}
+                description={
+                  <ul>
+                    <li>Cummins Inc. Director of Global Integrated Business planning</li>
+                    <li>Experienced in leading and deploying IBP in a variety of different businesses in multiple regions around the globe.</li>
+                    <li>25 years of industry  experience in operations, Quality, auditing, finance, and all aspects of IBP. </li>
+                    <li>With this experience,  encountered many adversities that come with implementation and have accumulated a long list of common potential failure modes and how to resolve or avoid them altogether. </li>
+                    <li>BS in business from Indiana University. </li>
+                    <li>MBA from Ball State University focused on finance.  BS in business from Kelley School of business IU.</li>
+                  </ul>                
+                }
+              />
+            </MKBox>
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <MKBox mb={1}>
+              <HorizontalTeamCard
+                image={profilePic2}
                 name="Kim Britton"
                 position={{ color: "info", label: "Partner" }}
                 description={
@@ -62,4 +87,4 @@ function Team2() {
   );
 }
 
-export default Team2;
+export default Team;

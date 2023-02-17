@@ -462,9 +462,9 @@ const DefaultNavbar = ({ brand, routes, transparent, light, action, sticky, rela
             // py={transparent ? 1.5 : 0.75}
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
           >
-            <MKBox component="img" src={brand.image} alt={brand.name} mb={-2} mt={-1} 
+            <MKBox component="img" src={brand.image} alt={brand.name} mb={-4} mt={-4} 
               // change width of logo on mobile
-              width={{ xs: "100px", sm: "120px", md: "140px", lg: "160px" }}
+              width={{ xs: "100px", sm: "140px", md: "160px", lg: "180px" }}
             />
           </MKBox>
           <MKBox
@@ -542,7 +542,7 @@ const DefaultNavbar = ({ brand, routes, transparent, light, action, sticky, rela
 DefaultNavbar.defaultProps = {
   brand: {
     name: "Delve Planning Architects",
-    image: require("assets/images/DelveLogo.svg").default,
+    image: require("assets/images/logosvg.svg").default,
     route: "/",
   },
   transparent: false,

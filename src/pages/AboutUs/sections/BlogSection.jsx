@@ -38,20 +38,17 @@ function BlogSection() {
   for(let i = 1; i <= Math.ceil(posts.length / postsPerPage); i++) {
     pageNumbers.push(i);
   }
-
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-
-
-  // remove any shortcodes from the content
+  // remove any shortcodes and html tags from the content
   const formatBlogContent = (content) => {
     if (!content) return "";
     // remove shortcodes and html tags
     const regex = /(\[.*?\])|(<[^>]+>)/g;
     return content.replace(regex, "");
-    // remove shortcodes
+    // this will remove shortcodes
     // const regex = /\[.*?\]/g;
-    // remove html tags
+    // this will remove html tags
     // const regex = /<[^>]+>/g;
   };
   

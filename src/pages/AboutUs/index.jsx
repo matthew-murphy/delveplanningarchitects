@@ -5,7 +5,7 @@ import TitleWithContent from "components/TitleWithContent";
 
 // About Us page sections
 import BlogSection from "./sections/BlogSection";
-import Team from "./sections/Team";
+import Team from "./sections/Team.jsx";
 import bgImage from "assets/images/office-dark.jpg";
 import Header from "components/Headers/Header";
 

@@ -37,7 +37,7 @@ function DefaultFooter({ content }) {
               <MKTypography variant="h6">{brand.name}</MKTypography>
             </MKBox>
             <MKBox display="flex" alignItems="center" mt={3}>
-              {socials.map(({ icon, link }, key) => (
+              {socials ? socials.map(({ icon, link }, key) => (
                 <MKTypography
                   key={link}
                   component="a"
@@ -51,11 +51,11 @@ function DefaultFooter({ content }) {
                 >
                   {icon}
                 </MKTypography>
-              ))}
+              )): null}
             </MKBox>
           </Grid>
           {menus.map(({ name: title, items }) => (
-            <Grid key={title} item xs={6} md={2} sx={{ mb: 3 }}>
+            <Grid key={title} item xs={6} md={2} sx={{ mb: 3, display: "flex", flexDirection: "column", justifyContent: "center" }}>
               <MKTypography
                 display="block"
                 variant="button"
