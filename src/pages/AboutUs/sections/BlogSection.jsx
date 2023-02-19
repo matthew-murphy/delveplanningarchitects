@@ -4,6 +4,7 @@ import axios from "axios";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
+import { Skeleton } from "@mui/material";
 
 // Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
@@ -18,6 +19,11 @@ function BlogSection() {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(3);
+  const cards = []
+  for (let i = 0; i < 3; i++) {
+    cards.push(i)
+  }
+
 
   // api call to get posts from wordpress
   const getPosts = async () => {
@@ -56,7 +62,7 @@ function BlogSection() {
     <MKBox component="section" py={3}>
       <Container>
         <Grid container spacing={3} sx={{ mt: 3 }}>
-          {currentPosts?.map((post) => (
+          {loading === false ? currentPosts?.map((post) => (
             <Grid item xs={12} md={6} lg={4}>
               <MKBox mt={3}>
                 <DefaultBlogCard
@@ -75,7 +81,38 @@ function BlogSection() {
                 />
               </MKBox>
             </Grid>
-          ))}
+          )):
+          cards.map((card) => (
+            <Grid item xs={12} md={6} lg={4}>
+              <MKBox mt={3}>
+                <DefaultBlogCard
+                  title={
+                    <>
+                      <Skeleton variant="text" sx={{ fontSize: '3rem' }} />
+                    </>
+                  }
+                  description={
+                    <>
+                      <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                      <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                      <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                      <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                    </>
+                  }
+                  categories={[""]}
+                  action={
+                    {
+                      type: "",
+                      route: "",
+                      color: "",
+                      label: "",
+                    }
+                  }
+                />
+              </MKBox>
+            </Grid>
+          ))
+        }
         </Grid>
         <MKBox mt={5} sx={{ display: "flex", justifyContent: "center" }}>
           <MKPagination>

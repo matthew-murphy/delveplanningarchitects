@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 // @mui material components
 import Card from "@mui/material/Card";
 import MuiLink from "@mui/material/Link";
+import { Skeleton } from "@mui/material";
 
 // Material Kit 2 PRO React components
 import MKBox from "components/MKBox";
@@ -54,12 +55,15 @@ function DefaultBlogCard({ image, category, title, description, author, raised, 
   return (
     <Card>
       <MKBox position="relative" borderRadius="lg" mx={2} mt={raised ? -3 : 2}>
-        {action.type === "internal" ? (
+        {image ? action.type === "internal" ? (
           <Link to={action.route}>{imageTemplate}</Link>
         ) : (
           <MuiLink href={action.route} target="_blank" rel="noreferrer">
             {imageTemplate}
           </MuiLink>
+        ) : (
+          // loading animation
+          <Skeleton variant="rounded" sx={{ borderRadius: '8px' }} height={300} />
         )}
       </MKBox>
       <MKBox p={3}>
@@ -78,6 +82,7 @@ function DefaultBlogCard({ image, category, title, description, author, raised, 
         {action.type === "internal" ? (
           <Link to={action.route}>
             <MKTypography
+              width={"100%"}
               minHeight={"3.438rem"}
               variant="h5"
               textTransform="capitalize"
@@ -90,6 +95,7 @@ function DefaultBlogCard({ image, category, title, description, author, raised, 
         ) : (
           <MuiLink href={action.route} target="_blank" rel="noreferrer">
             <MKTypography
+              width={"100%"}
               minHeight={"3.438rem"}
               variant="h5"
               textTransform="capitalize"

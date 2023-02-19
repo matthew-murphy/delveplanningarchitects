@@ -1,5 +1,5 @@
 import React, {useEffect, useState}from 'react';
-import { Grid } from '@mui/material';
+import { CircularProgress, Grid } from '@mui/material';
 import MKAlert from 'components/MKAlert';
 import MKBox from 'components/MKBox';
 import MKTypography from 'components/MKTypography';
@@ -201,7 +201,10 @@ export default function ContactForm() {
                     analytics.logEvent('submit_form')
                   }}
                 >
-                  {loading ? 'Submitting...' : 'Submit'}
+                  {loading ? 
+                    <>Submitting <CircularProgress size={"1rem"} color={"white"} sx={{ marginLeft: "8px" }} /> </>
+                    : 'Submit'
+                  }
                 </MKButton>
               </Grid>
             </MKBox>
