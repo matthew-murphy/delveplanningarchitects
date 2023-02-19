@@ -169,8 +169,8 @@ export default function ContactForm() {
                     onChange={updateInput}
                     value={formData.message}
                     variant="standard"
-                    label="What can we help you?"
-                    placeholder="Describe your problem in at least 250 characters"
+                    label="How can we help you?"
+                    placeholder="Describe your problem or question here..."
                     InputLabelProps={{ shrink: true }}
                     multiline
                     fullWidth
