@@ -60,7 +60,7 @@ function Team() {
               />
             </MKBox>
           </Grid>
-          <Grid item xs={12} lg={6}>
+          {/* <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
                 image={profilePic2}
@@ -80,7 +80,7 @@ function Team() {
                 }
               />
             </MKBox>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </MKBox>
