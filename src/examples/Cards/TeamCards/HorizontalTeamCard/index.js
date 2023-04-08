@@ -13,7 +13,7 @@ import MKTypography from "components/MKTypography";
 
 function HorizontalTeamCard({ image, name, position, description }) {
   return (
-    <Card sx={{ mt: 3, minHeight: "540px" }}>
+    <Card sx={{ mt: 3, minHeight: "700px" }}>
       <Grid container>
         <Grid item xs={12} md={6} lg={4} sx={{ mt: -6 }}>
           <MKBox width="100%" pt={2} pb={1} px={2}>
@@ -36,7 +36,7 @@ function HorizontalTeamCard({ image, name, position, description }) {
           </MKBox>
         </Grid>
       </Grid>
-      <MKTypography variant="body2" color="text" sx={{ width: "80%", alignSelf: "center"}} pt={2}>
+      <MKTypography variant="body2" color="text" sx={{ width: "80%", alignSelf: "center", height: "500px"}} pt={2}>
         {description}
       </MKTypography>
     </Card>

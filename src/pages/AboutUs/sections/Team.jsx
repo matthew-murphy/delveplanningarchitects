@@ -13,7 +13,7 @@ import HorizontalTeamCard from "examples/Cards/TeamCards/HorizontalTeamCard";
 
 // Images
 import profilePic from "assets/images/debbie_img.png";
-import profilePic2 from "assets/images/kim_img.png";
+import profilePic2 from "assets/images/profilepix.jpg";
 function Team() {
   return (
     <MKBox
@@ -48,7 +48,7 @@ function Team() {
                 name="Debbie Climer"
                 position={{ color: "info", label: "Partner" }}
                 description={
-                  <ul style={{ paddingBottom: "16px"}}>
+                  <ul style={{ paddingBottom: "16px", minHeight: "500px" }}>
                     <li>Cummins Inc. Director of Global Integrated Business planning</li>
                     <li>Experienced in leading and deploying IBP in a variety of different businesses in multiple regions around the globe.</li>
                     <li>25 years of industry  experience in operations, Quality, auditing, finance, and all aspects of IBP. </li>
@@ -60,27 +60,24 @@ function Team() {
               />
             </MKBox>
           </Grid>
-          {/* <Grid item xs={12} lg={6}>
+          <Grid item xs={12} lg={6}>
             <MKBox mb={1}>
               <HorizontalTeamCard
                 image={profilePic2}
-                name="Kim Britton"
+                name="Sriram Parameswaran"
                 position={{ color: "info", label: "Partner" }}
                 description={
-                  <ul style={{ paddingBottom: "16px"}}>
-                    <li>Personal Journey in Planning & Materials Management</li>
-                    <li>Honeywell Exec Director Planning </li>
-                    <li>3M Inc.: Global Division IBP Deployment Director</li>
-                    <li>3M GMbH.: Region IBP Deployment Director</li>
-                    <li>Cummins Engine Inc: Director IBP,  Capability Ldr </li>
-                    <li>Ford of Japan: S&OP/E Leader</li>
-                    <li>Ford of Europe: S&OP Deployment Ldr</li>
-                    <li>Royal Navy: Engineering & Logistics </li>
-                  </ul>                
+                  <ul style={{ paddingBottom: "16px", minHeight: "500px"}}>
+                    <li>Amazon Inc – General Manager for Advanced Analytics and Operational Excellence</li>
+                    <li>Experienced in leading and deploying Analytical and Planning Solutions across the globe</li>
+                    <li>16 years of industry experience in operations, analytics, machine learning, AI for planning, materials management, supplier management and business process improvement.</li>
+                    <li>Lead multiple software implementations, analytical solutions for planning, MRP / ERP replacements and supply chain transformation.</li>
+                    <li>MS in Nuclear Engineering from University Of Tennessee Knoxville, MBA in Supply Chain Management from University Of Tennessee Knoxville </li>
+                  </ul>   
                 }
               />
             </MKBox>
-          </Grid> */}
+          </Grid>
         </Grid>
       </Container>
     </MKBox>

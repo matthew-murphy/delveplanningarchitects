@@ -63,8 +63,8 @@ app.post("/", async (req, res) => {
       });
 
       const mailOptions = {
-        from: "delveplanningarchitects.com <matthewmrph40@gmail.com>",
-        to: "matthewmrph40@gmail.com",
+        from: "delveplanningarchitects.com <debbieclimer@delveplanningarchitects.com>",
+        to: "debbieclimer@delveplanningarchitects.com",
         subject: "DelvePlanningArchitects - Contact Form Message",
         html:
           `
