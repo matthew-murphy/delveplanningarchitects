@@ -48,7 +48,7 @@ function Team() {
                 name="Debbie Climer"
                 position={{ color: "info", label: "Partner" }}
                 description={
-                  <ul style={{ paddingBottom: "16px", minHeight: "500px" }}>
+                  <ul style={{ paddingBottom: "16px" }}>
                     <li>Cummins Inc. Director of Global Integrated Business planning</li>
                     <li>Experienced in leading and deploying IBP in a variety of different businesses in multiple regions around the globe.</li>
                     <li>25 years of industry  experience in operations, Quality, auditing, finance, and all aspects of IBP. </li>
@@ -67,7 +67,7 @@ function Team() {
                 name="Sriram Parameswaran"
                 position={{ color: "info", label: "Partner" }}
                 description={
-                  <ul style={{ paddingBottom: "16px", minHeight: "500px"}}>
+                  <ul style={{ paddingBottom: "16px" }}>
                     <li>Amazon Inc – General Manager for Advanced Analytics and Operational Excellence</li>
                     <li>Experienced in leading and deploying Analytical and Planning Solutions across the globe</li>
                     <li>16 years of industry experience in operations, analytics, machine learning, AI for planning, materials management, supplier management and business process improvement.</li>
