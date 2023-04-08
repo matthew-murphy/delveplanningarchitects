@@ -40,7 +40,7 @@ export default function Services() {
           content="We provide planning process and systems solutions to drive accuracy, fidelity and credibility of business and material planning across operational, tactical, and strategic horizons. "
         />
         <SplitInfoSection 
-          height={560}
+          height={500}
           title1={"ERP Management"} 
           description1={
             <>
